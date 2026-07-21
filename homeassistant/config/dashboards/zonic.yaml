@@ -1,0 +1,122 @@
+title: Zonic
+
+views:
+  - title: Home
+    path: home
+    icon: mdi:robot
+
+    type: sections
+    max_columns: 2
+
+    sections:
+
+      ##################################################
+      # HERO
+      ##################################################
+
+      - type: grid
+        cards:
+
+          - type: custom:button-card
+            icon: mdi:robot-happy
+            name: Zonic
+            label: |
+              [[[
+                const h = new Date().getHours();
+                if (h < 12) return "Good Morning, Adji 👋";
+                if (h < 18) return "Good Afternoon, Adji 👋";
+                return "Good Evening, Adji 👋";
+              ]]]
+            show_label: true
+
+            styles:
+
+              card:
+                - height: 170px
+                - border-radius: 24px
+                - padding: 24px
+                - background: linear-gradient(135deg,#5B3DF5,#7A5CFF)
+
+              grid:
+                - grid-template-areas: '"i n" "i l"'
+                - grid-template-columns: 70px auto
+
+              icon:
+                - color: white
+                - width: 46px
+
+              name:
+                - color: white
+                - font-size: 30px
+                - font-weight: bold
+
+              label:
+                - color: white
+                - font-size: 18px
+
+      ##################################################
+      # QUICK CONTROL
+      ##################################################
+
+      - type: grid
+        cards:
+
+          - type: tile
+            entity: switch.bedroom_lampu_kosan_switch_1
+            name: Lampu Kasur
+
+          - type: tile
+            entity: switch.bedroom_lampu_kosan_switch_2
+            name: Depan KM
+
+          - type: tile
+            entity: switch.bedroom_lampu_kosan_switch_3
+            name: Strip LED
+
+          - type: tile
+            entity: media_player.mitv_mosr1
+            name: Mi TV
+
+      ##################################################
+      # TV
+      ##################################################
+
+      - type: grid
+        cards:
+
+          - type: custom:mini-media-player
+            entity: media_player.mitv_mosr1
+            artwork: cover
+            sound_mode: icon
+
+      ##################################################
+      # AI
+      ##################################################
+
+      - type: grid
+        cards:
+
+          - type: tile
+            entity: conversation.ollama_conversation
+            name: Ollama
+
+      ##################################################
+      # SYSTEM
+      ##################################################
+
+      - type: grid
+        cards:
+
+          - type: gauge
+            entity: sensor.system_monitor_memory_use
+            name: Memory
+            severity:
+              green: 0
+              yellow: 1500
+              red: 3000
+            max: 4000
+
+          - type: gauge
+            entity: sensor.system_monitor_disk_use
+            name: Disk Used
+            max: 120

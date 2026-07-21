@@ -1,0 +1,155 @@
+type: grid
+columns: 3
+square: false
+cards:
+
+  ####################################################
+  # Lampu Kasur
+  ####################################################
+
+  - type: custom:button-card
+    entity: switch.bedroom_lampu_kosan_switch_1
+    name: Lampu Kasur
+    icon: mdi:lightbulb
+
+    show_state: true
+
+    tap_action:
+      action: toggle
+
+    hold_action:
+      action: more-info
+
+    state:
+
+      - value: "on"
+        icon: mdi:lightbulb-on
+        styles:
+          card:
+            - background: linear-gradient(135deg,#FFD54F,#F9A825)
+          icon:
+            - color: "#111111"
+          name:
+            - color: "#111111"
+          state:
+            - color: "#333333"
+
+      - value: "off"
+        icon: mdi:lightbulb-outline
+        styles:
+          card:
+            - background: "#202332"
+
+    styles:
+
+      card:
+        - border-radius: 22px
+        - height: 120px
+
+      icon:
+        - width: 40px
+
+      name:
+        - font-size: 16px
+        - font-weight: bold
+
+      state:
+        - font-size: 13px
+
+  ####################################################
+  # Lampu Depan KM
+  ####################################################
+
+  - type: custom:button-card
+    entity: switch.bedroom_lampu_kosan_switch_2
+    name: Lampu Depan
+    icon: mdi:lightbulb
+
+    show_state: true
+
+    tap_action:
+      action: toggle
+
+    hold_action:
+      action: more-info
+
+    state:
+
+      - value: "on"
+        icon: mdi:lightbulb-on
+        styles:
+          card:
+            - background: linear-gradient(135deg,#FFD54F,#F9A825)
+          icon:
+            - color: "#111111"
+          name:
+            - color: "#111111"
+          state:
+            - color: "#333333"
+
+      - value: "off"
+        icon: mdi:lightbulb-outline
+        styles:
+          card:
+            - background: "#202332"
+
+    styles:
+
+      card:
+        - border-radius: 22px
+        - height: 120px
+
+      icon:
+        - width: 40px
+
+      name:
+        - font-size: 16px
+        - font-weight: bold
+
+      state:
+        - font-size: 13px
+
+  ####################################################
+  # Lampu Strip
+  ####################################################
+
+  - type: custom:button-card
+    entity: switch.bedroom_lampu_kosan_switch_3
+    name: Strip LED
+    icon: mdi:led-strip-variant
+
+    show_state: true
+
+    tap_action:
+      action: toggle
+
+    hold_action:
+      action: more-info
+
+    state:
+
+      - value: "on"
+        styles:
+          card:
+            - background: linear-gradient(135deg,#7C4DFF,#651FFF)
+
+      - value: "off"
+        styles:
+          card:
+            - background: "#202332"
+
+    styles:
+
+      card:
+        - border-radius: 22px
+        - height: 120px
+
+      icon:
+        - width: 40px
+
+      name:
+        - font-size: 16px
+        - font-weight: bold
+
+      state:
+        - font-size: 13px

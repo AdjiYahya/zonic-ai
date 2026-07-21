@@ -1,0 +1,104 @@
+type: vertical-stack
+
+cards:
+
+  ####################################################
+  # Title
+  ####################################################
+
+  - type: markdown
+    content: |
+      ## 📺 Entertainment
+
+  ####################################################
+  # TV
+  ####################################################
+
+  - type: custom:mini-media-player
+    entity: media_player.mitv_mosr1
+
+    name: Xiaomi TV
+
+    artwork: cover
+    source: icon
+
+    group: false
+
+    hide:
+
+      power: false
+      source: false
+      sound_mode: true
+      icon: false
+      controls: false
+      volume: false
+      info: false
+
+    shortcuts:
+
+      columns: 3
+
+      buttons:
+
+        - name: YouTube
+          icon: mdi:youtube
+          type: source
+          id: YouTube
+
+        - name: Netflix
+          icon: mdi:netflix
+          type: source
+          id: Netflix
+
+        - name: HDMI
+          icon: mdi:monitor
+          type: source
+          id: HDMI
+
+  ####################################################
+  # Remote
+  ####################################################
+
+  - type: grid
+
+    columns: 3
+    square: false
+
+    cards:
+
+      - type: button
+        icon: mdi:volume-minus
+        tap_action:
+          action: perform-action
+          perform_action: media_player.volume_down
+          target:
+            entity_id: media_player.mitv_mosr1
+
+      - type: button
+        icon: mdi:power
+        tap_action:
+          action: toggle
+          target:
+            entity_id: media_player.mitv_mosr1
+
+      - type: button
+        icon: mdi:volume-plus
+        tap_action:
+          action: perform-action
+          perform_action: media_player.volume_up
+          target:
+            entity_id: media_player.mitv_mosr1
+
+      - type: button
+        icon: mdi:skip-previous
+
+      - type: button
+        icon: mdi:play-pause
+        tap_action:
+          action: perform-action
+          perform_action: media_player.media_play_pause
+          target:
+            entity_id: media_player.mitv_mosr1
+
+      - type: button
+        icon: mdi:skip-next

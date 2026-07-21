@@ -1,0 +1,130 @@
+type: vertical-stack
+
+cards:
+
+  ####################################################
+  # Header
+  ####################################################
+
+  - type: markdown
+    content: |
+      ## 🖥️ System Monitor
+
+  ####################################################
+  # Memory & Storage
+  ####################################################
+
+  - type: grid
+    columns: 2
+    square: false
+
+    cards:
+
+      - type: gauge
+        entity: sensor.system_monitor_memory_use
+        name: Memory
+        max: 4000
+        severity:
+          green: 0
+          yellow: 2500
+          red: 3500
+
+      - type: gauge
+        entity: sensor.system_monitor_disk_use
+        name: Disk
+        max: 100
+        severity:
+          green: 0
+          yellow: 70
+          red: 90
+
+  ####################################################
+  # Status Cards
+  ####################################################
+
+  - type: grid
+    columns: 2
+    square: false
+
+    cards:
+
+      - type: tile
+        entity: sensor.system_monitor_memory_use
+        name: RAM Used
+        icon: mdi:memory
+
+      - type: tile
+        entity: sensor.system_monitor_disk_use
+        name: Disk Used
+        icon: mdi:harddisk
+
+  ####################################################
+  # Home Assistant
+  ####################################################
+
+  - type: custom:button-card
+    icon: mdi:home-assistant
+
+    name: Home Assistant
+
+    show_label: true
+
+    label: |
+      [[[
+        return "Running";
+      ]]]
+
+    styles:
+
+      card:
+        - height: 100px
+        - border-radius: 22px
+        - background: linear-gradient(135deg,#03A9F4,#0288D1)
+
+      icon:
+        - color: white
+        - width: 42px
+
+      name:
+        - color: white
+        - font-size: 18px
+        - font-weight: bold
+
+      label:
+        - color: white
+        - opacity: .9
+
+  ####################################################
+  # Docker
+  ####################################################
+
+  - type: custom:button-card
+    icon: mdi:docker
+
+    name: Docker
+
+    show_label: true
+
+    label: |
+      [[[
+        return "Operational";
+      ]]]
+
+    styles:
+
+      card:
+        - height: 100px
+        - border-radius: 22px
+        - background: linear-gradient(135deg,#0DB7ED,#0089C7)
+
+      icon:
+        - color: white
+        - width: 42px
+
+      name:
+        - color: white
+        - font-size: 18px
+        - font-weight: bold
+
+      label:
+        - color: white

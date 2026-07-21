@@ -1,0 +1,80 @@
+type: vertical-stack
+
+cards:
+
+  ####################################################
+  # Header
+  ####################################################
+
+  - type: markdown
+    content: |
+      ## 🤖 AI Assistant
+
+  ####################################################
+  # Ollama Status
+  ####################################################
+
+  - type: custom:button-card
+    entity: conversation.ollama_conversation
+
+    name: Zonic AI
+    icon: mdi:robot-happy
+
+    show_state: false
+    show_label: true
+
+    label: |
+      [[[
+
+        return "Ready to assist";
+
+      ]]]
+
+    tap_action:
+      action: more-info
+
+    styles:
+
+      card:
+        - height: 150px
+        - border-radius: 24px
+        - background: linear-gradient(135deg,#6C63FF,#7C4DFF)
+        - padding: 20px
+
+      icon:
+        - color: white
+        - width: 52px
+
+      name:
+        - color: white
+        - font-size: 24px
+        - font-weight: bold
+
+      label:
+        - color: white
+        - opacity: 0.9
+        - font-size: 15px
+
+  ####################################################
+  # Quick Actions
+  ####################################################
+
+  - type: grid
+    columns: 2
+    square: false
+
+    cards:
+
+      - type: button
+        icon: mdi:chat-processing
+        name: Open Chat
+        tap_action:
+          action: navigate
+          navigation_path: /conversation
+
+      - type: button
+        icon: mdi:cog
+        name: AI Settings
+        tap_action:
+          action: navigate
+          navigation_path: /config/voice-assistants

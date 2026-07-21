@@ -1,4 +1,3 @@
-
 # Loads default set of integrations. Do not remove.
 default_config:
 
@@ -9,3 +8,37 @@ frontend:
 automation: !include automations.yaml
 script: !include scripts.yaml
 scene: !include scenes.yaml
+
+##########################################################
+# ZONIC DASHBOARD
+##########################################################
+
+lovelace:
+  resource_mode: yaml
+
+  resources:
+    - url: /hacsfiles/button-card/button-card.js
+      type: module
+
+    - url: /hacsfiles/Bubble-Card/bubble-card.js
+      type: module
+
+    - url: /hacsfiles/lovelace-layout-card/layout-card.js
+      type: module
+
+    - url: /hacsfiles/lovelace-card-mod/card-mod.js
+      type: module
+
+    - url: /hacsfiles/lovelace-mushroom/mushroom.js
+      type: module
+
+    - url: /hacsfiles/mini-media-player/mini-media-player-bundle.js
+      type: module
+
+  dashboards:
+    zonic-dashboard:
+      mode: yaml
+      filename: dashboards/zonic.yaml
+      title: Zonic
+      icon: mdi:robot
+      show_in_sidebar: true

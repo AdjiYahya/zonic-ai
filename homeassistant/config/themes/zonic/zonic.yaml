@@ -1,0 +1,158 @@
+Zonic:
+  ##########################################################
+  # ZONIC THEME v1
+  ##########################################################
+
+  modes:
+    dark:
+
+      ##########################################################
+      # PRIMARY
+      ##########################################################
+
+      primary-color: "#B26AF6"
+      accent-color: "#C084FC"
+
+      ##########################################################
+      # BACKGROUND
+      ##########################################################
+
+      primary-background-color: "#0F111A"
+      secondary-background-color: "#171923"
+
+      lovelace-background: "#0F111A"
+
+      ##########################################################
+      # CARD
+      ##########################################################
+
+      card-background-color: "rgba(30,30,46,0.60)"
+      ha-card-background: "rgba(30,30,46,0.60)"
+
+      ##########################################################
+      # TEXT
+      ##########################################################
+
+      primary-text-color: "#F5F5F7"
+      secondary-text-color: "#B8B8C5"
+      disabled-text-color: "#6E6E80"
+
+      ##########################################################
+      # SIDEBAR
+      ##########################################################
+
+      sidebar-background-color: "#12141F"
+
+      sidebar-text-color: "#D6D6E7"
+
+      sidebar-selected-background-color: "rgba(178,106,246,0.18)"
+
+      sidebar-selected-text-color: "#FFFFFF"
+
+      sidebar-icon-color: "#9D9DB5"
+
+      sidebar-selected-icon-color: "#C084FC"
+
+      ##########################################################
+      # HEADER
+      ##########################################################
+
+      app-header-background-color: "rgba(15,17,26,0.90)"
+
+      app-header-text-color: "#FFFFFF"
+
+      ##########################################################
+      # STATES
+      ##########################################################
+
+      state-icon-color: "#C084FC"
+
+      state-icon-active-color: "#FFD166"
+
+      ##########################################################
+      # SWITCH
+      ##########################################################
+
+      switch-checked-button-color: "#B26AF6"
+
+      switch-checked-track-color: "rgba(178,106,246,.45)"
+
+      switch-unchecked-button-color: "#D1D5DB"
+
+      switch-unchecked-track-color: "#50505F"
+
+      ##########################################################
+      # SLIDER
+      ##########################################################
+
+      slider-color: "#B26AF6"
+
+      ##########################################################
+      # BORDER
+      ##########################################################
+
+      divider-color: "rgba(255,255,255,.06)"
+
+      ##########################################################
+      # SUCCESS
+      ##########################################################
+
+      success-color: "#3DDC84"
+
+      warning-color: "#FBBF24"
+
+      error-color: "#EF4444"
+
+      info-color: "#60A5FA"
+
+      ##########################################################
+      # MUSHROOM
+      ##########################################################
+
+      mush-rgb-state-light: "255,209,102"
+
+      mush-rgb-state-switch: "178,106,246"
+
+      mush-rgb-state-media-player: "178,106,246"
+
+      mush-rgb-state-climate: "96,165,250"
+
+      mush-rgb-state-person: "178,106,246"
+
+      ##########################################################
+      # BUBBLE CARD
+      ##########################################################
+
+      bubble-main-background-color: "rgba(30,30,46,.60)"
+
+      bubble-accent-color: "#B26AF6"
+
+      bubble-icon-background-color: "rgba(178,106,246,.18)"
+
+      ##########################################################
+      # CUSTOM VARIABLES
+      ##########################################################
+
+      zonic-radius: "22px"
+
+      zonic-padding: "20px"
+
+      zonic-gap: "20px"
+
+      zonic-shadow: "0 8px 30px rgba(0,0,0,.35)"
+
+      zonic-blur: "blur(20px)"
+
+      zonic-card: "rgba(30,30,46,.60)"
+
+      zonic-card-hover: "rgba(43,45,66,.85)"
+
+      zonic-border: "1px solid rgba(255,255,255,.06)"
+
+      ##########################################################
+      # FONTS
+      ##########################################################
+
+      primary-font-family: "Inter, SF Pro Display, Roboto, sans-serif"
+
+      paper-font-common-base_-_font-family: "Inter, SF Pro Display, Roboto, sans-serif"

@@ -1,0 +1,18 @@
+toggle_lampu_depan_km:
+  alias: Toggle Lampu Depan KM
+  description: ''
+  mode: single
+  sequence:
+  - choose:
+    - conditions:
+      - condition: state
+        entity_id: switch.bedroom_lampu_kosan_switch_2
+        state: 'on'
+      sequence:
+      - action: switch.turn_off
+        target:
+          entity_id: switch.bedroom_lampu_kosan_switch_2
+    default:
+    - action: switch.turn_on
+      target:
+        entity_id: switch.bedroom_lampu_kosan_switch_2

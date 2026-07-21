@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.pyc
+
+# Home Assistant runtime
+homeassistant/config/.storage/
+homeassistant/config/.cache/
+homeassistant/config/.cloud/
+homeassistant/config/deps/
+homeassistant/config/.HA_VERSION
+homeassistant/config/.ha_run.lock
+
+# Database & logs
+homeassistant/config/home-assistant*.db*
+homeassistant/config/*.log*
+homeassistant/config/tts/
+
+# Secrets
+homeassistant/config/secrets.yaml
+
+# VS Code
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# (Optional) Ignore HACS frontend source
+# homeassistant/config/custom_components/hacs/hacs_frontend/
+
+# (Optional) Ignore downloaded HACS cards
+# homeassistant/config/www/community/
+
+homeassistant/config/custom_components/hacs/hacs_frontend/

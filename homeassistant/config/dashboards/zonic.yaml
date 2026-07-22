@@ -60,7 +60,7 @@ views:
 
         cards:
 
-          - !include includes/entertainment.yaml
+          - !include includes/media.yaml
 
           - !include includes/ai.yaml
 

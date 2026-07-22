@@ -1,80 +1,42 @@
-type: vertical-stack
+type: custom:button-card
 
-cards:
+icon: mdi:robot-happy
 
-  ####################################################
-  # Header
-  ####################################################
+name: Zonic AI
 
-  - type: markdown
-    content: |
-      ## 🤖 AI Assistant
+show_label: true
 
-  ####################################################
-  # Ollama Status
-  ####################################################
+label: >
+  [[[
 
-  - type: custom:button-card
-    entity: conversation.ollama_conversation
+    return `
+      Ready
+      <br>
+      Ollama Connected
+    `;
 
-    name: Zonic AI
-    icon: mdi:robot-happy
+  ]]]
 
-    show_state: false
-    show_label: true
+tap_action:
+  action: more-info
 
-    label: |
-      [[[
+styles:
 
-        return "Ready to assist";
+  card:
+    - height: 100px
+    - border-radius: 22px
+    - background: linear-gradient(135deg,#5B3DF5,#8E6BFF)
 
-      ]]]
+  icon:
+    - color: white
+    - width: 42px
 
-    tap_action:
-      action: more-info
+  name:
+    - color: white
+    - font-size: 22px
+    - font-weight: bold
 
-    styles:
-
-      card:
-        - height: 150px
-        - border-radius: 24px
-        - background: linear-gradient(135deg,#6C63FF,#7C4DFF)
-        - padding: 20px
-
-      icon:
-        - color: white
-        - width: 52px
-
-      name:
-        - color: white
-        - font-size: 24px
-        - font-weight: bold
-
-      label:
-        - color: white
-        - opacity: 0.9
-        - font-size: 15px
-
-  ####################################################
-  # Quick Actions
-  ####################################################
-
-  - type: grid
-    columns: 2
-    square: false
-
-    cards:
-
-      - type: button
-        icon: mdi:chat-processing
-        name: Open Chat
-        tap_action:
-          action: navigate
-          navigation_path: /conversation
-
-      - type: button
-        icon: mdi:cog
-        name: AI Settings
-        tap_action:
-          action: navigate
-          navigation_path: /config/voice-assistants
+  label:
+    - color: white
+    - opacity: .85
+    - font-size: 14px

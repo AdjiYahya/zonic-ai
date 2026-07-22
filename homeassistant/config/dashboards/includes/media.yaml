@@ -1,0 +1,44 @@
+type: vertical-stack
+
+cards:
+
+  - type: markdown
+    content: |
+      ## 📺 Entertainment
+
+  - type: custom:mini-media-player
+    entity: media_player.mitv_mosr1
+
+    name: Xiaomi TV
+    artwork: cover
+
+    group: false
+
+    hide:
+      icon: false
+      power: false
+      source: false
+      sound_mode: true
+      controls: true
+      info: true
+
+    volume_stateless: false
+
+    shortcuts:
+      columns: 3
+      buttons:
+
+        - name: Netflix
+          icon: mdi:netflix
+          type: source
+          id: Netflix
+
+        - name: YouTube
+          icon: mdi:youtube
+          type: source
+          id: YouTube
+
+        - name: HDMI
+          icon: mdi:monitor
+          type: source
+          id: HDMI
